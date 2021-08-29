@@ -22,14 +22,28 @@ npx hardhat help
 
 # Setting up localhost
 
-1. To spin up a local network, open your terminal and run the following command, This should create a local network with 19 accounts:
+1. To spin up a local network, open your terminal and run the following command:
 
 ```
 $ npx hardhat node
 ```
 
+- This should create a local network with 19 accounts
+
 2. Next, keep the node running and open a separate terminal window to deploy the contract. In a separate window, run the following command:
 
 ```
 $ npx hardhat run scripts/deploy.js --network localhost
+```
+
+- When the deployment is complete, the CLI should print out the addresses of the contracts that were deployed:
+
+3. Importing accounts into MetaMask
+
+- You can import the accounts created by the node into your Metamask wallet to try out in the app. Each of these accounts is seeded with 10000 ETH. To import one of these accounts, first switch your MetaMask wallet network to Localhost 8545. Then paste one of the private keys from the accounts
+
+4. Now we can test out the app! Run the following command to spin up localhost:
+
+```
+$ npm run dev
 ```
