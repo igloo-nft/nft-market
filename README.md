@@ -47,3 +47,13 @@ $ npx hardhat run scripts/deploy.js --network localhost
 ```
 $ npm run dev
 ```
+
+# Run test files
+
+- to run test files use the following command:
+
+```
+$ npx hardhat test
+```
+
+### Configure Matic-mainnet [LINK](https://docs.matic.network/docs/develop/network-details/network/#mumbai-testnet)
