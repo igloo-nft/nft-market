@@ -13,3 +13,11 @@ npx hardhat node
 node scripts/sample-script.js
 npx hardhat help
 ```
+
+# The Stack
+
+- Ethereum Layer - Polygon
+- Web application framework - Next.js
+- Solidity development environment - Hardhat
+- File Storage - IPFS
+- Ethereum Web Client Library - Ethers.js
