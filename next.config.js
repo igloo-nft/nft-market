@@ -5,7 +5,6 @@ const { parsed: myEnv } = require("dotenv").config({
 });
 
 module.exports = {
-  reactStrictMode: true,
   webpack(config, { isServer }) {
     config.plugins.push(new webpack.EnvironmentPlugin(myEnv));
     config.plugins.push(
@@ -15,11 +14,11 @@ module.exports = {
       })
     );
     if (!isServer) {
-      config.node = {
-        fs: "empty",
+      config.resolve.fallback = {
+        fs: false,
+        module: false,
       };
     }
     return config;
   },
-  webpack5: false,
 };
