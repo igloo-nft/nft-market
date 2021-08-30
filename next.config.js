@@ -13,12 +13,6 @@ module.exports = {
         contextRegExp: /__tests__/,
       })
     );
-    if (!isServer) {
-      config.resolve.fallback = {
-        fs: false,
-        module: false,
-      };
-    }
     return config;
   },
 };
