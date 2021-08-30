@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx hardhat compile next build",
+    "prebuild": "npx hardhat compile",
+    "build": "next build",
     "start-next": "next start",
     "lint": "next lint",
     "start": "next start -p $PORT"
