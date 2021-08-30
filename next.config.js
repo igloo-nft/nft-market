@@ -14,6 +14,12 @@ module.exports = {
       config.resolve.fallback.fs = false;
     }
     config.plugins.push(new webpack.EnvironmentPlugin(myEnv));
+    config.plugins.push(
+      new webpack.IgnorePlugin({
+        resourceRegExp: /.*/,
+        contextRegExp: /__tests__/,
+      })
+    );
     return config;
   },
 };

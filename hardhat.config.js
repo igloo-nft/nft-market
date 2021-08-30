@@ -30,5 +30,8 @@ module.exports = {
       accounts: [privateKey],
     },
   },
+  paths: {
+    tests: "./__test__",
+  },
   solidity: "0.8.4",
 };
