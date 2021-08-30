@@ -1,7 +1,15 @@
 require("@nomiclabs/hardhat-waffle");
-const fs = require("fs");
-const privateKey = fs.readFileSync(".secret").toString();
+require("dotenv").config();
+const privateKey = process.env.PRIVATE_KEY;
 const projectId = process.env.PROJECT_ID;
+
+if (privateKey.error) {
+  throw privateKey.error;
+}
+
+if (projectId.error) {
+  throw projectId.error;
+}
 
 module.exports = {
   networks: {
@@ -11,6 +19,7 @@ module.exports = {
     mumbai: {
       url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
       accounts: [privateKey],
+      gasPrice: 8000000000,
     },
     mainnet: {
       url: `https://arbitrum-mainnet.infura.io/v3/${projectId}`,
