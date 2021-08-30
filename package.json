@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start-next": "next start",
+    "lint": "next lint",
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
