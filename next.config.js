@@ -8,8 +8,8 @@ module.exports = {
   reactStrictMode: true,
   webpack(config, { isServer }) {
     if (!isServer) {
-      config.resolve.fallback.fs = false;
-      return config;
+      // config.resolve.fallback.fs = false;
+      // return config;
     }
     config.plugins.push(new webpack.EnvironmentPlugin(myEnv));
     return config;
