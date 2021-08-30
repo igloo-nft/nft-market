@@ -16,6 +16,9 @@ module.exports = {
     );
     if (!isServer) {
       config.resolve.fallback.fs = false;
+      config.node = {
+        fs: "empty",
+      };
     }
     return config;
   },
