@@ -1,7 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require("dotenv").config();
 const privateKey = process.env.PRIVATE_KEY;
-const projectId = process.env.PROJECT_ID;
+const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
 
 if (privateKey.error) {
   throw privateKey.error;
