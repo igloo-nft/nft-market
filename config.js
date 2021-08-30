@@ -5,8 +5,8 @@
 
 // const withNextEnv = nextEnv();
 
-export const nftaddress = process.env.NFT_ADDRESS;
-export const nftmarketaddress = process.env.MARKET_ADDRESS;
+export const nftaddress = process.env.NEXT_PUBLIC_NFT_ADDRESS;
+export const nftmarketaddress = process.env.NEXT_PUBLIC_MARKET_ADDRESS;
 
 // module.exports = withNextEnv({
 //   nftaddress: process.env.NFT_ADDRESS,
